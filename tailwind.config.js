@@ -5,7 +5,7 @@ module.exports = {
     fontFamily:{
       'serif': ['ui-serif', '"Clicker Script"'],
       'sense-serif': ['about','"MV Boli"'],
-      'sanse-serif':['nav','Kiester'],
+      // 'sanse-serif':['nav','Kiester'],
       'sans-serif':['resume', 'Cathedral' ]
 
     },
