@@ -15,14 +15,47 @@
     <link href="http://fonts.cdnfonts.com/css/cathedral" rel="stylesheet">
 </head>
 <body>
+<header class="">
+    <nav class="flex items-center justify-between flex-wrap backgroundColor pl-5 w-screen nav">
+        <div class=" flex-grow flex text-lg text-white w-max">
+            <div class=" lg:flex-grow flex-grow flex items-center ">
+                <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-300 mr-4">
+                    Home
+                </a>
+                <a href="" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">
+                    About
+                </a>
+                <a href="" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">
+                    Blog
+                </a>
+                <a href="" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">
+                    Contact
+                </a>
+                <div >
+                    <div>
+
+                        </div>
+
+                    </div>
+                </div>
+            <div class="mr-4 ">
+                <a href="" class="inline-block text-sm px-4 py-2 leading-none lg:mt-0">
+                    <img class="object-fit:cover w-20 md:self-end" alt="Logo" src="images/logo.png">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
 <div class="flex flex-row m-5 mb-10 mt-10 h-max rounded-xl aboutBgColor">
-    <div class="w-[400px] h-full flex justify-start m-10">
+    <div class="w-1/3 h-full flex justify-start m-10">
         <img src="images/me.jpg" class="rounded-xl">
     </div>
-    <div class="flex flex-col text-start items-center w-1/2">
-        <h1 class="font-serif text-8xl mt-10 mb-10">Hi</h1>
-        <p class="font-sense-serif">
-            My name is Atoosa, but you can call me Ati! I'm Iranian but currently living and studying in Australia.
+    <div class="flex flex-col text-start items-center w-2/3">
+        <h1 class="hiNav  mt-10 mb-10">Hi</h1>
+        <p class="about m-5 text-justify">
+            My name is Ati! I'm Iranian but currently living and studying in Australia.
             I decided to change my major after bachelor because I wasn't happy with Urban planning. I found out
             my passion is making website, and I can't feel passing time when I'm doing coding. The decision wasn't easy
             at all but I knew I need to pursue something that's makes me happy. I am student at Griffith university,and
@@ -30,18 +63,21 @@
             <br>I don't have enough professional expertise to know for sure because the world is changing so quickly, and I'm just starting this carrier.
             But I'm confident that I can approach every assignment with a unique perspective and a remarkable strategy.
             I am always up for new challenges and helpful criticism. I am receptive to new ideas and quick to pick them up.
+            The internship can assist me in determining whether a particular field or job is right for me and by taking the internship
+            program in university,I found out I really enjoy my while I am working, also this experience makes me to familiar
+            with professional environment, and how to communicate between team members.
         </p>
     </div>
 </div>
 <hr class="divided_1 w-1/2 ">
 <!-----------------------------------------resume------------------------------------------------------->
-<div class=" flex lg:flex-row md:flex-row sm:flex-col xs:flex-col m-10 mb-36 font-[resume] " >
+<div class=" flex lg:flex-row md:flex-row sm:flex-col xs:flex-col m-10 mb-36 font-[resume] text-white " >
     <div class="relative  text-amber-50 text-center m-3 w-1/3">
-        <div class="relative backgroundColor rounded-[50px] p-5 pt-0  hover:bg-neutral-600 h-full">
+        <div class="relative backgroundColor rounded-2xl p-5 pt-0  hover:bg-neutral-600 h-full">
             <div class="relative top-[-30px] grid justify-center mt-10">
                 <img class="w-20 rounded-[30px] p-1" src="images/education.jpg">
             </div>
-            <h2 class="font-bold text-xl -mt-2.5 font-sense-serif">My Education</h2>
+            <h2 class="font-bold text-xl -mt-2.5 resumeFont">My Education</h2>
             <p class="pb-4 italic">Graduated from Azad university of Mashhad, Iran in Bachelor of Urban Planning,
                 currently studying Master of Information Technology. My major is software development and support. Moreover,
                 I have a certificate of Web Design Expert from <a href="https://www.roshdana.com/"  target="_blank" class="underline italic">Roshdana</a>
@@ -49,24 +85,25 @@
         </div>
     </div>
     <div class="relative  text-amber-50 text-center m-3 w-1/3">
-        <div class="relative backgroundColor rounded-[50px] p-5 pt-0 hover:bg-neutral-600 h-full" >
+        <div class="relative backgroundColor rounded-2xl p-5 pt-0 hover:bg-neutral-600 h-full" >
             <div class="relative top-[-30px] grid justify-center mt-10 ">
                 <img class="w-20 rounded-[30px] " src="images/experience.png">
             </div>
-            <h2 class="font-bold text-xl -mt-2.5 font-sense-serif">My Experience</h2>
+            <h2 class="font-bold text-xl -mt-2.5 resumeFont">My Experience</h2>
             <p class="pb-4 italic">All of my projects are for Academic experience. Assignments and projects
-                that I did in university and the course that I took outside university. I gain experience
-                in Laravel framework, PHP, HTML, CSS, SQL and database, JavaScript.
+                that I did in university and the course that I took outside university.Also, I work
+                in Coding Labs company as intern.I gain experience in Laravel framework, PHP, HTML, CSS, SQL and database, JavaScript
+                tailwind Css.
 
             </p>
         </div>
     </div>
     <div class="relative  text-amber-50 text-center m-3 w-1/3">
-        <div class="relative backgroundColor rounded-[50px] p-5 pt-0 hover:bg-neutral-600 h-full">
+        <div class="relative backgroundColor rounded-2xl p-5 pt-0 hover:bg-neutral-600 h-full">
             <div class="relative top-[-30px] grid justify-center mt-10">
                 <img class="w-20 rounded-[30px] " src="images/goal.jpg">
             </div>
-            <h2 class="font-bold text-xl font-sense-serif">My Goal</h2>
+            <h2 class="font-bold text-xl resumeFont">My Goal</h2>
             <p class="pb-4 italic text-lg">My goal is to become a proficient back-end and front-end web developer,
                 grow as a professional over time, work as a freelancer, and run my own business while I travel! </p>
         </div>
