@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .backgroundColor{
-    background-color: rgb(49,49,49);
+    background-color: #313131;
 }
 
 .aboutBgColor{
