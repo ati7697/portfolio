@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.backgroundColor{
+    background-color: rgb(49,49,49);
+}
+
+.aboutBgColor{
+    background-color: rgb(161, 139, 115, 0.54);
+
+}
+.portfolioFontColor{
+    color: rgb(69,62,62);
+}
+.hiFont{
+    font-family: 'Clicker Script', serif;font-size: 150px;
+}
+
+.bodyAbout{
+    font-family: 'MV Boli', sans-serif;
+
+}
+
+.nav{
+    font-family: 'Kiester', sanse-serif;
+
+}
