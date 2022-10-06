@@ -2,110 +2,109 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./output.css" rel=”stylesheet”>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Clicker Script' rel='stylesheet'>
     <link href="http://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/mv-boli" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/kiester" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/cathedral" rel="stylesheet">
-
-    {{--    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>--}}
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
 </head>
 <body class="flex flex-col min-h-screen">
-<header class="">
-    <nav class="flex items-center justify-between flex-wrap backgroundColor pl-5 w-screen font-[nav]">
-        <div class=" block flex-grow flex text-lg text-amber-50 w-max">
-            <div class="text-sm lg:flex-grow flex-grow flex items-center ">
-                <a href="{{url('index')}}" class="block lg:inline-block lg:mt-0 hover:text-blue-300 mr-4">
-                    Home
-                </a>
-                <a href="{{url('about')}}" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">
-                    About
-                </a>
-                <a href="{{url('posts')}}" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">
-                    Blog
-                </a>
-                <a href="{{url('contact')}}" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">
-                    Contact
-                </a>
+<!--<header class="">-->
+<!--    <nav class="flex items-center justify-between flex-wrap backgroundColor pl-5 w-screen font-[nav]">-->
+<!--        <div class=" block flex-grow flex text-lg text-amber-50 w-max">-->
+<!--            <div class="text-sm lg:flex-grow flex-grow flex items-center ">-->
+<!--                <a href="" class="block lg:inline-block lg:mt-0 hover:text-blue-300 mr-4">-->
+<!--                    Home-->
+<!--                </a>-->
+<!--                <a href="" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">-->
+<!--                    About-->
+<!--                </a>-->
+<!--                <a href="" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">-->
+<!--                    Blog-->
+<!--                </a>-->
+<!--                <a href="" class="block  lg:inline-block lg:mt-0  hover:text-blue-300 mr-4">-->
+<!--                    Contact-->
+<!--                </a>-->
+<!--                <div >-->
+<!--                    <div>-->
 
-                @auth
-                <div >
-                    <div>
-                        <!-- Settings Dropdown -->
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
-                            <x-dropdown  width="48">
-                                <x-slot name="trigger">
-                                    <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                                        <div>{{ Auth::user()->name }}</div>
+<!--                        </div>-->
 
-                                        <div class="ml-1">
-                                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                            </svg>
-                                        </div>
-                                    </button>
-                                </x-slot>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            <div class="flex justify-end ">-->
+<!--                <a href="" class="inline-block text-sm px-4 py-2 leading-none lg:mt-0">-->
+<!--                    <img class="object-fit: cover w-20 md:self-end right-0" alt="Logo" src="">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
 
-                                <x-slot name="content">
-                                    <!-- Authentication -->
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
-                                            {{ __('Log Out') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                </x-slot>
-                            </x-dropdown>
-                        </div>
-
-                    </div>
-                </div>
-
-                @else <!--- user is not logged in --->
-                <x-dropdown  width="48">
-                    <x-slot name="trigger">
-                        <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                            <div>Account</div>
-
-                            <div class="ml-1">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                        </button>
-                    </x-slot>
-                    <x-slot name="content">
-                        <div class="">
-                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
-                                <li>
-                                    <a href="{{route('login')}}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Login</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('register')}}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">register</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </x-slot>
-                </x-dropdown>
-
-                @endauth
-
-            </div>
-            <div class="flex justify-end ">
-                <a href="{{url('index')}}" class="inline-block text-sm px-4 py-2 leading-none lg:mt-0">
-                    <img class="object-fit: cover w-20 md:self-end right-0" alt="Logo" src={{URL::asset('/image/logo.png')}}>
-                </a>
+<!--</header>-->
+<div class="flex flex-row max-h-full md:max-h-screen border-collapse ">
+<!--    left part -->
+    <div class="w-1/3 ml-0 w-max font-[nav]">
+        <div class="overflow-y-auto ">
+            <img class="w-64 object-fit: cover" src=>
+        </div>
+        <div class="overflow-y-auto w-64 py-4 px-3 bg-gray-50 backgroundColor">
+            <div class="text-center text-amber-50">
+                <h3 class="font-bold text-2xl">Ati Ahmadi</h3>
+                <p>Backend developer in Australia</p>
             </div>
         </div>
-    </nav>
+        <div>
+            <aside class="w-64" aria-label="Sidebar">
+                <div class="overflow-y-auto py-4 px-3 bg-gray-50 rounded-b-lg backgroundColor">
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-600">
+                                <span class="ml-3 text-amber-50 ">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-600">
+                                <span class="flex-1 ml-3 whitespace-nowrap text-amber-50">About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-600">
+                                <span class="flex-1 ml-3 whitespace-nowrap text-amber-50">Blog</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-600 dark:hover:bg-gray-600">
+                                <span class="flex-1 ml-3 whitespace-nowrap text-amber-50">Contact me</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
 
-</header>
-<div class="">
+    {{--    right part--}}
+    <div class=" flex px-8 w-2/3 ml-0 justify-items-center">
+        <div class="grid">
+            <h1 class="md:font-extrabold text-6xl self-end mb-5 portfolioFontColor">
+                I Am A <br> Web Developer
+            </h1>
+            <p class="self-start">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                Nulla vel blandit nisl. Etiam condimentum gravida ligula, et accumsan ante vehicula a.
+            </p>
+        </div>
+    </div>
+
+
 
 </div>
+
 <footer class="w-full flex flex-col  backgroundColor text-blue-400 mt-5">
 
 </footer>
