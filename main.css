@@ -21,8 +21,18 @@
     font-family: 'MV Boli', sans-serif;
 
 }
-
+.hiNav{
+    font-family: "Clicker Script",  serif;
+    font-size: 70px;
+}
+.about{
+    font-family: "MV Boli", sans-serif;
+}
 .nav{
-    font-family: 'Kiester', sanse-serif;
+    font-family: 'Kiester',  sans-serif;
 
+}
+
+.resumeFont{
+    font-family: "Cathedral", sans-serif;
 }
